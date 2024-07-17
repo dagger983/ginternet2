@@ -1,0 +1,198 @@
+.employeebg {
+    padding: 30px;
+    background-color: yellow;
+}
+
+.employee-details {
+    height: 300px;
+    width: 450px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(255, 255, 255, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    background-color: black;
+    color: yellow;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-title {
+    font-size: 70px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.pro-icon {
+    height: 90px;
+    width:90px;
+}
+
+.pro-info p {
+    margin-top: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+.salesproducthead{
+    font-size:28px;
+}
+
+.employee-details2 {
+    text-align: center;
+    height: 100%;
+    width: 500px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(255, 255, 255, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    background-color: black;
+    color: yellow;
+}
+
+.employee-details2 input {
+    height: 50px;
+    width: 400px;
+    padding: 10px;
+    margin: 10px 20px 20px 20px;
+    font-size: 25px;
+
+}
+
+.submitBtn {
+    width: 150px;
+    padding: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 28px;
+    transition: background-color 0.3s ease;
+}
+
+.employeeMain {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.product-table th,
+.product-table td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: center;
+}
+
+.product-table th {
+    background-color:black;
+    color:yellow;
+}
+
+.product-table .odd-row {
+    background-color: #000;
+    color: #ff0;
+}
+
+.product-table .even-row {
+    background-color: #ff0;
+    color: #000;
+}
+
+.edit-button {
+    background-color: #ff0;
+    color: #000;
+    border: 1px solid #000;
+    padding: 4px 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.product-table .even-row .edit-button {
+    background-color: #000;
+    color: #ff0;
+}
+
+.edit-button i {
+    margin-right: 4px;
+}
+
+@media (max-width: 768px) {
+
+    .product-table th,
+    .product-table td {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    .edit-button {
+        padding: 3px 6px;
+        font-size: 12px;
+    }
+
+    .project-title {
+        font-size: 20px
+    }
+
+    .employeeMain {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .employeebg {
+        padding: 10px;
+    }
+
+    .employee-details {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        padding: 15px;
+    }
+
+    .employee-details2 {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .pro-icon {
+        height: 60px;
+        width: 60px;
+        margin-bottom: 30px;
+    }
+
+    .pro-info p {
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+
+
+    .employee-details2 input {
+        height: 50px;
+        width: 80%;
+        padding: 10px;
+        margin: 10px 20px 20px 20px;
+        font-size: 15px;
+    
+    }
+    .salesproducthead{
+        font-size:18px;
+    }
+    .submitBtn {
+        width: 75px;
+        font-size: 18px;
+       
+    }
+}

@@ -1,0 +1,108 @@
+.owner {
+    background-color: yellow;
+    padding: 30px;
+}
+
+.owner h1 {
+    font-size: 70px;
+}
+
+.owner-card {
+    height: 450px;
+    width: 450px;
+    background-color: black;
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 18px;
+    color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+.owner-card p{
+    font-size:24px;
+}
+.owner-card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.owner-img {
+    height: 190px;
+    width:190px;
+    border-radius: 50%;
+}
+
+
+.sales-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top:30px
+}
+
+.sales-table th, .sales-table td {
+    padding: 8px;
+    text-align: center;
+}
+
+.sales-table th {
+    background-color: #000;
+    color: #ff0;
+}
+
+.sales-table .odd-row {
+    background-color: #000;
+    color: #ff0;
+}
+
+.sales-table .even-row {
+    background-color: #ff0;
+    color: #000;
+}
+
+.edit-button {
+    color: #ff0;
+    background-color: #000;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.even-row .edit-button {
+    color: #000;
+    background-color: #ff0;
+}
+.backBtn {
+    width: 150px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+@media (max-width:768px) {
+    .owner-card-container{
+        flex-direction: column;
+    }
+    .owner h1 {
+        font-size: 35px;
+    }
+    .owner-card{
+        height:350px;
+        width:100%;
+    }
+   
+    .owner-img {
+        height: 95px;
+        width:95px;
+        border-radius: 50%;
+    }
+
+}
