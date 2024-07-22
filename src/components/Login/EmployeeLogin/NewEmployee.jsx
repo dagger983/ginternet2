@@ -113,6 +113,7 @@ function NewEmployee() {
 
     useEffect(() => {
         const token = Cookies.get('employee-registered');
+        Cookies.set("employee-username",username,{ expires: 1 })
         if (token) {
             window.location.href = '/employee-dashboard';
         }

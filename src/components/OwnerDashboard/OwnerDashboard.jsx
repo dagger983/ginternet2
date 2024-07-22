@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './Owner.css';
 import Moment from 'moment';
-import SalesDetails from './SalesDetails'; // Import the SalesDetails component
+import SalesDetails from './SalesDetails'; 
 
 function OwnerDashboard() {
   const [reports, setReports] = useState([]);
   const [totalRevenue, setTotalRevenue] = useState(0);
   const [selectedDate, setSelectedDate] = useState(null);
   const [salesDetails, setSalesDetails] = useState([]);
-  const [showSalesDetails, setShowSalesDetails] = useState(false); // State for showing/hiding SalesDetails
+  const [showSalesDetails, setShowSalesDetails] = useState(false); 
   const OwnerDate = Moment().format("DD/MM/YYYY");
 
   useEffect(() => {

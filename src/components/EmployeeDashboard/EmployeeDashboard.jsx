@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Cookies from 'js-cookie';
 import Moment from 'moment';
 import EditProduct from './EditProduct';
+import { FaTrash, FaPen } from 'react-icons/fa';
 import './EmployeeDashboard.css';
 
 const EmployeeDashboard = () => {
@@ -114,6 +115,22 @@ const EmployeeDashboard = () => {
         }
     };
 
+    const deleteProduct = async (productId) => {
+        try {
+            const response = await fetch(`https://ginternet.onrender.com/products/${productId}`, {
+                method: 'DELETE',
+            });
+
+            if (!response.ok) {
+                throw new Error(`Error: ${response.status} ${response.statusText}`);
+            }
+
+            setProducts(products.filter(product => product.id !== productId));
+        } catch (error) {
+            console.error('Error deleting product:', error);
+        }
+    };
+
     const handleEditClick = (productId) => {
         setEditingProductId(productId);
     };
@@ -169,6 +186,7 @@ const EmployeeDashboard = () => {
                             <th>Product Name</th>
                             <th>Price</th>
                             <th>Edit</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -176,7 +194,7 @@ const EmployeeDashboard = () => {
                             <React.Fragment key={product.id}>
                                 {editingProductId === product.id ? (
                                     <tr className={index % 2 === 0 ? 'even-row' : 'odd-row'}>
-                                        <td colSpan="3">
+                                        <td colSpan="4">
                                             <EditProduct
                                                 product={product}
                                                 onUpdate={updateProduct}
@@ -190,8 +208,13 @@ const EmployeeDashboard = () => {
                                         <td>₹ {product.price}</td>
                                         <td>
                                             <button onClick={() => handleEditClick(product.id)} className="edit-button">
-                                                <i className="fas fa-pen" style={{ cursor: "pointer" }}></i>
+                                                <FaPen style={{ cursor: "pointer" }} />
                                             </button>
+                                        </td>
+                                        <td>
+
+                                            <FaTrash style={{ color: "red", cursor: "pointer" }} onClick={() => deleteProduct(product.id)} className="delete-button" />
+
                                         </td>
                                     </tr>
                                 )}
